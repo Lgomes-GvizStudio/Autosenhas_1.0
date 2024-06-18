@@ -75,7 +75,7 @@ int main(void) {
     const int screenHeight = 450;
     char senha[100];
 
-    InitWindow(screenWidth, screenHeight, "Senhas");
+    InitWindow(screenWidth, screenHeight, "AutoSenhas v1.0");
 
     const int minChars = 6;
     const int maxChars = 12;
@@ -86,8 +86,9 @@ int main(void) {
     Texture2D pressedTexture = LoadTexture("info_icon_click.png");
 
     // Carrega um ícone para a janela
-    Image icon = LoadImage("C:\\Users\\gomes\\projects\\raylib_slid\\key.png");
-    SetWindowIcon(icon);
+    Texture2D icon = LoadTexture("key.png");
+    Image Window_icon = LoadImageFromTexture(icon);
+    SetWindowIcon(Window_icon);
 
     // Inicializa o botão "copy"
     Button myButton = {
